@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anissh | Business Analyst Student</title>
+
+    <!-- Tailwind CSS (CDN) -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        background: '#0a0a0a',
+
+                        text: '#ffffff',
+
+                        accent: '#8b5cf6', // Purple
+
+                    },
+
+                    fontFamily: {
+
+                        sans: ['Inter', 'sans-serif'],
+
+                        display: ['Staatliches', 'cursive'], // A suitable thick condensed font
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Phosphor Icons -->
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Three.js -->
+
+    <script type="importmap">
+{
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/"
+    }
+}
+</script>
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+
+    <!-- Lenis for Smooth Scroll -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+
+
+
+
+</head>
+
+<body
+    class="bg-[#000000] text-white font-sans overflow-x-hidden antialiased selection:bg-accent selection:text-white pb-0">
+
+
+
+    <!-- Custom Cursor -->
+
+    <div id="cursor" class="fixed rounded-full pointer-events-none z-[9999]"></div>
+
+
+
+    <!-- Navigation -->
+
+    <nav
+        class="fixed top-0 w-full z-50 mix-blend-difference px-12 py-8 flex justify-between items-center bg-transparent pointer-events-none">
+
+        <div class="font-bold text-[16px] tracking-tighter pointer-events-auto cursor-pointer">anissh.🧩</div>
+
+        <a href="mailto:anisshpandey007@gmail.com"
+            class="hidden md:block absolute top-8 left-1/2 -translate-x-1/2 text-[16px] font-mono tracking-widest pointer-events-auto cursor-pointer font-bold lowercase hover:opacity-70 transition-opacity">connect@anissh</a>
+
+        <div class="flex gap-12 text-[16px] font-bold tracking-widest uppercase pointer-events-auto">
+
+            <a href="#about" class="cursor-pointer hover:opacity-70 transition-opacity">About</a>
+
+            <a href="#work" class="cursor-pointer hover:opacity-70 transition-opacity">Work</a>
+
+            <a href="#contact" class="cursor-pointer hover:opacity-70 transition-opacity">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Social Sidebar -->
+
+    <div
+        class="fixed left-[20px] bottom-12 z-40 hidden lg:flex flex-col gap-10 pointer-events-auto bg-transparent px-3 py-6 rounded-full border border-white/5 transition-all duration-500 hover:bg-[#ebdfff] hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] group">
+
+        <a href="https://github.com/Anissh-Analytics" target ="_blank" class="social-icon magnetic-btn inline-block p-1"><i
+                class="ph-bold ph-github-logo text-[26px] text-white group-hover:text-[#050505] transition-colors duration-500"></i></a>
+
+        <a href="https://www.linkedin.com/in/anissh-pandey/" target ="_blank" class="social-icon magnetic-btn inline-block p-1"><i
+                class="ph-bold ph-linkedin-logo text-[26px] text-white group-hover:text-[#050505] transition-colors duration-500"></i></a>
+
+        <a href="https://x.com/PandeyAnissh" target ="_blank" class="social-icon magnetic-btn inline-block p-1"><i
+                class="ph-bold ph-twitter-logo text-[26px] text-white group-hover:text-[#050505] transition-colors duration-500"></i></a>
+
+        <a href="https://www.instagram.com/anissh_pandey/" target ="_blank" class="social-icon magnetic-btn inline-block p-1"><i
+                class="ph-bold ph-instagram-logo text-[26px] text-white group-hover:text-[#050505] transition-colors duration-500"></i></a>
+
+    </div>
+
+
+
+    <!-- Section 1: HERO -->
+
+    <section
+        class="relative h-screen w-full overflow-hidden perspective-[1000px] grid grid-cols-[35%_30%_35%] items-center px-[2vw]">
+
+
+
+        <!-- Left Column (35%) -->
+
+        <div class="w-full flex justify-start items-center z-10 pl-4" style="line-height: 0.8;">
+
+            <div class="flex flex-col">
+
+                <p class="text-[2vw] lg:text-[20px] font-medium tracking-wide mb-2 text-[#BC95FF]">Hello! I'm</p>
+
+               <div 
+                    class="font-[Inter] text-[10vw] md:text-[6vw] lg:text-[4vw] font-black tracking-[-0.05em] uppercase select-none text-white leading-[0.8]">
+                    ANISSH
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Center Column (30% - EMPTY NO-TEXT ZONE) -->
+
+        <!-- Center Column (30% - CHARACTER HERE) -->
+
+            <div class="w-full h-full flex items-center justify-center z-0">
+                <div class="character-container relative w-full min-h-[500px] flex items-center justify-center">
+                    <div class="character-model w-full h-full flex items-center justify-center">
+                        <canvas id="character-canvas" class="w-full h-full cursor-grab active:cursor-grabbing"></canvas>
+                    </div>
+                </div>
+            </div>
+
+
+        <!-- Right Column (35%) -->
+
+        <div class="w-full flex justify-end items-center z-10 pr-4 text-right" style="line-height: 0.8;">
+
+            <div class="flex flex-col items-end max-w-[30vw]">
+
+                <p class="text-[2vw] lg:text-[20px] font-medium tracking-wide mb-2 text-[#BC95FF]">A</p>
+
+                <!-- Solid White Text -->
+
+               <div 
+                    class="font-[Inter] text-[10vw] md:text-[6vw] lg:text-[4vw] font-black tracking-[-0.05em] uppercase select-none text-white leading-[0.8]">
+                    BUSINESS
+               </div>
+
+                <!-- Purple Glow Text -->
+
+                <div
+                    class="font-[Inter] text-[10vw] md:text-[6vw] lg:text-[4vw] font-black tracking-[-0.05em] uppercase text-[#BC95FF] select-none drop-shadow-[0_0_30px_#BC95FF] leading-[0.8]">
+
+                    ANALYST
+
+                </div>
+
+                <!-- White Outline Text -->
+
+                <div
+                    class="font-[Inter] text-[10vw] md:text-[6vw] lg:text-[4vw] font-black tracking-[-0.05em] uppercase text-transparent [-webkit-text-stroke:1.5px_white] z-0 leading-[0.8]">
+
+                    STUDENT
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+
+    </section>
+
+
+
+    <!-- Section 2: WHAT I DO -->
+
+    <section id="about" class="py-32 px-4 md:px-24 z-20 relative bg-[#000000]">
+
+        <h2 class="text-3xl font-bold tracking-tighter mb-20 revealing-text">WHAT I DO.</h2>
+
+
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            <!-- Left Cards -->
+
+            <div class="space-y-8 flex flex-col justify-center">
+
+                <div
+                    class="border border-white/10 bg-white/[0.02] backdrop-blur-md rounded-2xl p-10 hover:bg-white/[0.04] transition-colors fade-up cursor-pointer">
+
+                    <h3 class="text-2xl font-bold tracking-tight mb-4 text-[#f0f0f0]">ANALYZE</h3>
+
+                    <p class="text-[#a0a0a0] mb-6 leading-relaxed">I dive deep into data structures to uncover business
+                        insights. My focus is on turning raw massive datasets into interactive, actionable dashboards
+                        that drive decisions.</p>
+
+                    <div class="flex flex-wrap gap-3 font-semibold text-xs tracking-wider">
+
+                        <span class="px-4 py-2 border border-white/20 rounded-full">Data Mining</span>
+
+                        <span class="px-4 py-2 border border-white/20 rounded-full">Reporting</span>
+
+                        <span class="px-4 py-2 border border-white/20 rounded-full">Automation</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="border border-white/10 bg-white/[0.02] backdrop-blur-md rounded-2xl p-10 hover:bg-white/[0.04] transition-colors fade-up cursor-pointer"
+                    style="transition-delay: 100ms;">
+
+                    <h3 class="text-2xl font-bold tracking-tight mb-4 text-[#f0f0f0]">VISUALIZE</h3>
+
+                    <p class="text-[#a0a0a0] mb-6 leading-relaxed">I architect semantic data layers and design
+                        insightful visualizations. Complexity made simple with a strong focus on statistical
+                        significance and clear communication.</p>
+
+                    <div class="flex flex-wrap gap-3 font-semibold text-xs tracking-wider">
+
+                        <span class="px-4 py-2 border border-white/20 rounded-full">Dashboards</span>
+
+                        <span class="px-4 py-2 border border-white/20 rounded-full">Analytics</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Right Timeline -->
+
+            <div class="flex justify-center lg:justify-end items-center relative fade-up">
+
+                <div class="border-l-[1px] border-white/20 pl-10 space-y-16 py-10 relative">
+
+                    <!-- Glowing Path overlay -->
+
+                    <div
+                        class="absolute left-[-1px] top-0 w-[3px] h-full bg-gradient-to-b from-purple-500 to-transparent timeline-glow z-10 origin-top scale-y-0">
+                    </div>
+
+
+
+                    <div class="relative">
+
+                        <div
+                            class="absolute -left-[45px] top-1.5 w-3 h-3 bg-black border-2 border-white rounded-full z-20">
+                        </div>
+
+                        <p class="text-sm font-bold tracking-widest text-[#a0a0a0] mb-1">2024 — PRESENT</p>
+
+                        <h4 class="text-xl font-bold">Business Analyst Student</h4>
+
+                        <p class="text-sm text-gray-500 mt-2">University / Independent</p>
+
+                    </div>
+
+                    <div class="relative">
+
+                        <div
+                            class="absolute -left-[45px] top-1.5 w-3 h-3 bg-black border-2 border-white/50 rounded-full z-20">
+                        </div>
+
+                        <p class="text-sm font-bold tracking-widest text-[#a0a0a0] mb-1">2022 — 2024</p>
+
+                        <h4 class="text-xl font-bold">Data Enthusiast</h4>
+
+                        <p class="text-sm text-gray-500 mt-2">Self-Taught Analytics</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Section 3: MY WORK -->
+
+    <section id="work" class="py-32 px-0 bg-[#070707] relative overflow-hidden">
+
+        <div class="px-4 md:px-24 mb-16">
+
+            <h2 class="text-3xl font-bold tracking-tighter revealing-text">MY WORK.</h2>
+
+        </div>
+
+
+
+        <div class="horizontal-scroll-container w-[400vw] flex overflow-x-hidden relative">
+
+            <!-- Project 1 -->
+
+            <div class="w-screen px-4 md:px-24 flex-shrink-0 project-panel">
+
+                <div class="group relative w-full h-[60vh] rounded-2xl overflow-hidden cursor-pointer">
+
+                    <div
+                        class="absolute inset-0 bg-neutral-900 transition-transform duration-700 group-hover:scale-105 flex items-center justify-center border border-white/5">
+
+                        <div class="w-full h-full bg-gradient-to-br from-purple-900/40 to-black relative">
+
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-screen mix-blend-overlay">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+
+
+
+                    <div class="absolute top-10 left-10 pointer-events-none">
+
+                        <span
+                            class="font-[Anton] text-white text-[120px] leading-none opacity-20 project-number">01</span>
+
+                    </div>
+
+
+
+                    <div class="absolute bottom-10 left-10 pointer-events-none">
+
+                        <h3 class="text-4xl font-bold tracking-tighter mb-2">Finance KPI Dashboard</h3>
+
+                        <p class="text-[#a0a0a0] text-sm tracking-widest uppercase font-bold">Power BI • SQL • Python
+                        </p>
+
+                    </div>
+
+
+
+                   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                        <a href="https://github.com/Anissh-Analytics/Finance-KPI-Dashboard" target="_blank" class="text-black font-bold hover:scale-110 transition-transform">
+                            VISIT
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 2 -->
+
+            <div class="w-screen px-4 md:px-24 flex-shrink-0 project-panel">
+
+                <div class="group relative w-full h-[60vh] rounded-2xl overflow-hidden cursor-pointer">
+
+                    <div
+                        class="absolute inset-0 bg-neutral-900 transition-transform duration-700 group-hover:scale-105 flex items-center justify-center border border-white/5">
+
+                        <div class="w-full h-full bg-gradient-to-tr from-blue-900/40 to-black relative">
+
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="absolute top-10 left-10 pointer-events-none">
+
+                        <span
+                            class="font-[Anton] text-white text-[120px] leading-none opacity-20 project-number">02</span>
+
+                    </div>
+
+
+
+                    <div class="absolute bottom-10 left-10 pointer-events-none">
+
+                        <h3 class="text-4xl font-bold tracking-tighter mb-2">Customer Segmentation Pipeline</h3>
+
+                        <p class="text-[#a0a0a0] text-sm tracking-widest uppercase font-bold">Python • Pandas • Numpy
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                        <a href="https://github.com/Anissh-Analytics/K-Means-Customer-Segmentation-Pipeline" target="_blank" class="text-black font-bold hover:scale-110 transition-transform">
+                            VISIT
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+             <!-- Project 3 -->
+
+            <div class="w-screen px-4 md:px-24 flex-shrink-0 project-panel">
+
+                <div class="group relative w-full h-[60vh] rounded-2xl overflow-hidden cursor-pointer">
+
+                    <div
+                        class="absolute inset-0 bg-neutral-900 transition-transform duration-700 group-hover:scale-105 flex items-center justify-center border border-white/5">
+
+                        <div class="w-full h-full bg-gradient-to-br from-purple-900/40 to-black relative">
+
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1649061658110-b239d2cd1a51?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-40 mix-blend-screen mix-blend-overlay">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+
+
+
+                    <div class="absolute top-10 left-10 pointer-events-none">
+
+                        <span
+                            class="font-[Anton] text-white text-[120px] leading-none opacity-20 project-number">03</span>
+
+                    </div>
+
+
+
+                    <div class="absolute bottom-10 left-10 pointer-events-none">
+
+                        <h3 class="text-4xl font-bold tracking-tighter mb-2">HR Analytics Dashboard</h3>
+
+                        <p class="text-[#a0a0a0] text-sm tracking-widest uppercase font-bold">Power BI • SQL • Python
+                        </p>
+
+                    </div>
+
+
+
+                   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                        <a href="https://github.com/Anissh-Analytics/HR-Analytics-Dashboard-" target="_blank" class="text-black font-bold hover:scale-110 transition-transform">
+                            VISIT
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+            <!-- Project 4 -->
+
+            <div class="w-screen px-4 md:px-24 flex-shrink-0 project-panel">
+
+                <div class="group relative w-full h-[60vh] rounded-2xl overflow-hidden cursor-pointer">
+
+                    <div
+                        class="absolute inset-0 bg-neutral-900 transition-transform duration-700 group-hover:scale-105 flex items-center justify-center border border-white/5">
+
+                        <div class="w-full h-full bg-gradient-to-br from-purple-900/40 to-black relative">
+
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1643834004015-243c2f98e490?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-40 mix-blend-screen mix-blend-overlay">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
+
+
+
+                    <div class="absolute top-10 left-10 pointer-events-none">
+
+                        <span
+                            class="font-[Anton] text-white text-[120px] leading-none opacity-20 project-number">04</span>
+
+                    </div>
+
+
+
+                    <div class="absolute bottom-10 left-10 pointer-events-none">
+
+                        <h3 class="text-4xl font-bold tracking-tighter mb-2">Automated BI and Alerts System</h3>
+
+                        <p class="text-[#a0a0a0] text-sm tracking-widest uppercase font-bold">N8N • EXCEL • POWER BI
+                        </p>
+
+                    </div>
+
+
+
+                   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-white rounded-full flex items-center justify-center">
+                        <a href="https://github.com/Anissh-Analytics/Automated-Business-Analytics-Alert-System" target="_blank" class="text-black font-bold hover:scale-110 transition-transform">
+                            VISIT
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Section 4: TECH STACK 3D CLUSTER -->
+
+    <section id="tech" class="py-40 relative overflow-hidden bg-[#030303] flex flex-col justify-center items-center"
+        style="min-height: 100vh;">
+
+
+
+        <!-- Massive Centered Text -->
+
+        <h2
+            class="text-5xl md:text-[8rem] font-[Anton] tracking-widest text-center text-white/[0.04] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full whitespace-nowrap select-none pointer-events-none z-0">
+            MY TECH STACK</h2>
+
+
+
+        <!-- Bubble Cluster Container -->
+
+        <div id="bubble-container" class="relative w-full h-[600px] z-10 mx-auto max-w-6xl pointer-events-auto"></div>
+
+
+
+        <p
+            class="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500 font-bold tracking-[0.3em] text-[10px] uppercase z-20 pointer-events-none">
+            My Tech Skills</p>
+
+    </section>
+
+
+
+    <!-- Footer / Contact -->
+
+    <footer id="contact"
+        class="py-40 px-4 md:px-24 bg-[#000000] relative overflow-hidden flex flex-col items-center justify-center text-center">
+
+        <!-- Huge background text -->
+
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[Anton] text-[35vw] opacity-[0.03] select-none whitespace-nowrap pointer-events-none">
+
+            ANISSH
+
+        </div>
+
+
+
+        <p class="text-sm font-bold tracking-widest text-purple-400 mb-8 uppercase z-10">Got a project in mind?</p>
+
+        <h2
+            class="text-5xl md:text-8xl font-black tracking-tighter mb-20 z-10 hover:text-purple-400 transition-colors cursor-pointer">
+
+            <a href="mailto:anisshpandey007@gmail.com">Let's Work Together</a>
+
+        </h2>
+
+
+
+        <div class="flex gap-12 font-bold tracking-widest text-sm uppercase text-[#a0a0a0] z-10">
+
+            <a href="https://github.com/Anissh-Analytics" 
+               target ="_blank"
+               class="hover:text-white transition-colors">
+               GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/anissh-pandey" 
+               target ="_blank"
+               class="hover:text-white transition-colors">
+               LinkedIn
+            </a>
+
+            <a href="https://www.instagram.com/anissh_pandey/" 
+               target ="_blank"
+               class="hover:text-white transition-colors">
+               Instagram
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Scripts -->
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
